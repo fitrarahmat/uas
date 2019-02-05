@@ -1,6 +1,6 @@
 Pada kesempatan kali ini saya akan membahas tentang struktur direktori pada laravel. Mengapa hal ini ingin saya bahas? Menurut saya laravel 5 memiliki susunan direktori yang berbeda dari framework-framework PHP lainnya. Secara garis besar, kebanyakan framework PHP yang menganut pola MVC (Model-View-Controller) menggunakan skema direktori dengan nama “Model”, “View” dan “Controller” yang seluruhnya dikumpulkan kedalam sebuah direktori utama yang bernama “src” atau “app” / “application” (seperti Code Igniter). Pada skema tersebut, direktori “Model” digunakan untuk menyimpan class PHP yang berhubugan dengan model database, kemudian direktori “Controller” digunakan untuk menyimpan class PHP yang berhubungan dengan application logic dan direktori “View” digunakan untuk menyimpan file-file yang berhubungan tampilan aplikasi. Konvensi struktur direktori tersebut juga digunakan oleh laravel versi 5 namun dengan struktur yang sedikit berbeda dari biasanya dan (menurut saya) hal ini akan membuat bingung para pengguna framework yang baru berpindah dari framework lain seperti Yii / Code Igniter.
 
-Oke, Berikut ini adalah struktur direktori dari laravel 5:
+Oke, Berikut ini adalah struktur direktori dari laravel :
 
 |-- app
 |   |-- Console
@@ -65,7 +65,7 @@ views: Direktori ini digunakan untuk menyimpan seluruh file html / template blad
 test
 Laravel merupakan sebuah framework yang didesain dengan mindset testable framework. Oleh karena itu, secara default laravel sudah menyediakan library-library yang dibutuhkan untuk dapat melakukan unit testing seperti PHPUnit dan Mockery. Nah, direktori ini berfungsi untuk menyimpan seluruh file test yang dibuat untuk kemudian dijalankan oleh PHPUnit.
 
-Sejauh ini sepertinya saya sudah memaparkan beberapa direktori penting yang harus diperhatikan dalam menggunakan laravel 5. Eh, tunggu dulu. Kayaknya masih ada yang ketinggalan nih, kira-kira apa ya?
+Sejauh ini sepertinya saya sudah memaparkan beberapa direktori penting yang harus diperhatikan dalam menggunakan laravel . Eh, tunggu dulu. Kayaknya masih ada yang ketinggalan nih, kira-kira apa ya?
 
-Dimanakah saya harus meletakkan class Model di laravel 5?
-Salah satu yang membuat saya bingung pada saat menggunakan laravel 5 adalah bahwa tidak adanya direktori bernama “Models” seperti framework-framework PHP MVC lainnya. Lalu, dimanakah seharusnya kita meletakkan class Models yang sudah dibuat? Apakah kita harus membuat sendiri folder bernama “Models” di app/Http? Sebetulnya tidak ada konvensi khusus dimana letak class model berada, akan tetapi jika melihat default model user User.php yang disediakan oleh laravel serta lokasi generated model yang dibuat oleh laravel pada saat kita menggunakan perintah php artisan make:model maka dapat disimpulkan bahwa lokasi class Model pada laravel 5 adalah di dalam folder app seperti misalnya app\Product.php.
+Dimanakah saya harus meletakkan class Model di laravel ?
+Salah satu yang membuat saya bingung pada saat menggunakan laravel adalah bahwa tidak adanya direktori bernama “Models” seperti framework-framework PHP MVC lainnya. Lalu, dimanakah seharusnya kita meletakkan class Models yang sudah dibuat? Apakah kita harus membuat sendiri folder bernama “Models” di app/Http? Sebetulnya tidak ada konvensi khusus dimana letak class model berada, akan tetapi jika melihat default model user User.php yang disediakan oleh laravel serta lokasi generated model yang dibuat oleh laravel pada saat kita menggunakan perintah php artisan make:model maka dapat disimpulkan bahwa lokasi class Model pada laravel adalah di dalam folder app seperti misalnya app\Product.php.
